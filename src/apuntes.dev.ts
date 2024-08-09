@@ -35,3 +35,10 @@
 // 61
 // usar prisma o sql para traer todas las categorías
 // iterarlas y renderizarlas
+// me parece mejor usar el width y height para definir los ratios, eso ya escala solito, usar el fill a veces no funca bien -> quality puede ser útil para reducir pesos de imágenes, no olvidar darle título y agregar button que luego será "use client"
+// el params solo está definido en archivos asociados al routing dinámico: page, layout, route y uno raro llamado generateMetaData -> usar useParams en otros files tipo componentes de ui, pero se tiene que agregar el "use client", se puede agregar un genérico para tiparlo, agregar clases condicionales para resaltar category seleccionada
+// notar el caching de querys al cambiar de category, lazy loading de Images y la conversión de jpb o svg a webp incluso modificando quality de Image
+
+
+// TODOs
+// si entramos primero a /order y clickeamos cafe se muestras las imágenes, pero si ingresamos directamente a /order/cafe aparece broken y se muestra su alt xd
