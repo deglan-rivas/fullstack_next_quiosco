@@ -27,3 +27,11 @@
 
 // 60
 // el data fetching es usar un async await en componentes :o junto al prismaClient nomás -> notar que se usa una instancia global de "prisma" para evitar tener un pool de conexiones abierto
+// iterar en el arreglo de categories obtenido ez
+// básicamente lo más importante además de usar Image y Link es el routing dinámico con folders anidados usando [my_param]
+
+
+
+// 61
+// usar prisma o sql para traer todas las categorías
+// iterarlas y renderizarlas
