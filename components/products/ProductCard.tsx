@@ -1,6 +1,7 @@
 import { formatCurrency } from "@/src/utils"
 import { Product } from "@prisma/client"
 import Image from "next/image"
+import AddProductButton from "./AddProductButton"
 
 interface Props {
   product: Product
@@ -29,9 +30,9 @@ export default function ProductCard({ product }: Props) {
         {/* {product.price.toLocaleString("es-MX", { style: "currency", currency: "MXN" })} */}
       </p>
 
-      <button className="text-white bg-indigo-600 text-center uppercase py-2 rounded-md w-full font-bold cursor-pointer hover:bg-indigo-800">
-        Agregar
-      </button>
+      <AddProductButton
+        product={product}
+      />
     </div>
   )
 }

@@ -42,3 +42,10 @@
 
 // TODOs
 // si entramos primero a /order y clickeamos cafe se muestras las imágenes, pero si ingresamos directamente a /order/cafe aparece broken y se muestra su alt xd
+
+
+
+// 62
+// crea el store con zustand comenzando por type OrderItem ez es create y no createStore xd -> zustand solo se puede usar en el cliente
+// crear el add, remove, update y clear methods -> mover solo el button al lado del cliente para que tarde en renderizar, así evitamos hacer use client todo el componente del ProductCard -> no confundir el {data, x:y} con {...data,x:y} el primero tiene dobles llaves, el segundo rompe la referencia
+// solo destacar el caching del total con useMemo en OrdenSummaty y el disabled al llegar a MAX_ITEMS o MIN_ITEMS en OrderItem
