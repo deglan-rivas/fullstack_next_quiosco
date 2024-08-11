@@ -69,3 +69,15 @@
 
 // TODOs
 // lo único que falta es saber cómo formatear el input text al ejecutar un action xD antes hacía un e.preventDefault justamente para evitarlo, ahora no sé cómo forzar el reset
+
+
+
+// 64
+// crear las rutas para el admin con layout y sidebar, componente Logo en ui
+// crear un componente Heading con children para reciclar estilos
+// crear un compomente para los enlaces, resaltar enlaces coloreados, mostrar su contenido y un black para Ver Quiosco
+// traerse las órdenes con productos, mostrar info, crear nuevo tipo a partir de prisma types
+// crear un action para complete-order, mejor use server aparte para , notar que todos los server actions son async lo dice next en su error xd, de preferencia usar inputs para conectar, usar prisma con un .update, validación opcional con zod o solo un + y ! null check operator, todo lo que viene de formData es string | null undefined, 
+// data fetching revalidating existe por tiempo o eventos, next docs muestra solo por tags, pero también se puede por path ez solo hace un refetch desde el lado del cliente, no es que actualice las demás pantallas como websockets
+
+// type compuestos prisma 687 Q&A

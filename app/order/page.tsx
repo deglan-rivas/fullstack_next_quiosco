@@ -1,8 +1,10 @@
+import Heading from "@/components/ui/Heading"
+
 function OrderPage() {
   return (
-    <div className="text-center">
+    <Heading>
       OrderPage
-    </div>
+    </Heading>
   )
 }
 

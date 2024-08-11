@@ -19,3 +19,10 @@ export const OrderSchema = z.object({
     })
     .array(),
 });
+
+export const OrderIdSchema = z.object({
+  orderId: z.string()
+    .transform((str) => Number(str))
+    .refine((val) => !isNaN(val), { message: 'Id no es un valor numerico' })
+    .refine((val) => val > 0, { message: 'Id no es un valor positivo' })
+})
