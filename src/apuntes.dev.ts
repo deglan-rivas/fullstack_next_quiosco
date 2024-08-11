@@ -49,3 +49,23 @@
 // crea el store con zustand comenzando por type OrderItem ez es create y no createStore xd -> zustand solo se puede usar en el cliente
 // crear el add, remove, update y clear methods -> mover solo el button al lado del cliente para que tarde en renderizar, así evitamos hacer use client todo el componente del ProductCard -> no confundir el {data, x:y} con {...data,x:y} el primero tiene dobles llaves, el segundo rompe la referencia
 // solo destacar el caching del total con useMemo en OrdenSummaty y el disabled al llegar a MAX_ITEMS o MIN_ITEMS en OrderItem
+
+
+
+// 63
+// relación de muchos a muchos con tabla pivote entre Ordenes y Products -> si colocamos correctamente el fields y nos dice fields invalid es porque entonces es un syntax error y sí: faltaba una coma entre fileds y references :D -> todo model debe tener una PK o dará error xd @id nomás o @uuid
+// server actions son async fn's asociados al crud pues actúan como si fueran llamadas al backend, por eso deben tener use server, hacer la misma jugada que separar con use client por si todo el componente es use server pero al revés xd, pueden ir en useEffect u OnClick de preferencia en form -> notar que el snippet rfc o rfce no agrega el async, qué loco ver async components en react xd
+// maquetar un form button submit y input text, crear un action use server en su folder, incluirlo en el handleX del componente use clent, validar con un console.log ez
+// pnpm i zod, usar zod para crear un OrderSchema y validar el input del form
+// pnpm i react-tostify, mostrar todos los errores obntenidos con zod
+// validar los errores nuevamente en el servidor, pues se puede desactivar el js desde el frontend y rip validaciones xD, antxdev me parece que subió algunos clones a yt usando "html first"
+// también validar el total y order
+
+// ingresar la data a la db, de preferencia usar transactions en prisma o typeorm
+// armar las validaciones con zod siempre a partir del user input, esa data se valida, lo que se ingresa a la db es una data formateada -> en el server mejor tipar la data como unknown antes que any, pues el mismo zod lo valida
+// el ToastNotification es use client no olvidar xd de preferencia en layout.tsx que no sea el principal, no sé por qué da warnings, fácil es hydratation
+// aproveché en tipar la respuesta del create-order.action.ts tal cual como si fuera response de api
+// los actions son files .ts, formData es jodido de trabajar usar full chatgpt o copilot o codeium, zod puede manejar el unknown y de hecho es mejor que el any, las transacciones con prisma son más fáciles que con typeorm, es mejor hacer varios videos cortos para no omitir información ni regrabar los videos tantas veces por la misma razón que estudiar todos los días un poco es mejor que estudiar todo un día antes
+
+// TODOs
+// lo único que falta es saber cómo formatear el input text al ejecutar un action xD antes hacía un e.preventDefault justamente para evitarlo, ahora no sé cómo forzar el reset

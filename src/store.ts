@@ -8,6 +8,7 @@ interface Store {
   incrementByOne: (id: Product['id']) => void
   decreseByOne: (id: Product['id']) => void
   removeItem: (id: Product['id']) => void
+  clearOrder: () => void
 }
 
 const MAX_ITEMS = 5
@@ -93,4 +94,10 @@ export const useStore = create<Store>((set, get) => ({
       order: state.order.filter((item) => item.id !== id)
     }))
   },
+
+  clearOrder() {
+    set(() => ({
+      order: []
+    }))
+  }
 }));
