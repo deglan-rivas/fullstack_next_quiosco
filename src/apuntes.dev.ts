@@ -89,3 +89,7 @@
 // incluir la categoría e inferir tipos con awaited typeof o usar types derivados
 // recuperar el paginador a través de searchParams
 // crear el > de paginador, recuperar el total prodcuts y calcular total de páginas, condicional si llegamos a página límite, añadir el left arrow del paginador con su condicional y validaciones, 
+// crear new product button y buscador con media queries, validar el buscador con zod, usar el userRouter hook y ToastNotification, por eso hacerlo use client -> yo preferiría usar un select con formData, así se evitan errores de usuario tipo cafe != Café != Cafe o darle lógica con trim() y toLowerCase(), crear una nueva ruta search/ y recuperar de la db con un get -> por eso creo que sería mejor tenerlo como un action para usar el use server -> aunque en realidad ningún get es un server action, me estoy loqueando xd
+
+
+
