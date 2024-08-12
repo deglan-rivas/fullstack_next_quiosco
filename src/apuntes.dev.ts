@@ -93,3 +93,10 @@
 
 
 
+// 66
+// crear el form para routing, cargar las categorías con un get, un server component puede renderizar client component, pero client no puede con server-> todo se loquea, warning en client diciento que no puede usar prisma, incluso si lo comentamos dice async fn solo en server y no client raro -> composition pattern con children rompe la dependecia y permite usar server dentro de client component 705-707 rip, notar que debe ser client compoment pues usará tostify
+// el dilema fue que debe ser client component para usar el tostify, pero el form necesita un action para crear en la db con prisma, por eso debe ser server component
+// realizar la validación con zod como ya sabemos,
+// pnpm i next-cloudinary, seguir los docs de npm next-cloudinary para crear los 3 env vars, renderizar el componente para ver imágenes de type=file ez, notar que next-cloudinary solo funca con use client :o, 
+// un poco jodido la doc de next-cloudinary, seguir tutoriales nomás xd https://next.cloudinary.dev/clduploadwidget/basic-usage -> la cosa es tener un component con drag and drop para subir la imagen a cloudinary -> lo que sí es que es bastante configurable, hay que generar un preset y se puede limitar cantidad y tamaños máximos, 
+// la idea es usar un client component para subir la imagen a cloudinary, si todo va bien usamos el secureUrl para mostrarlo y al enviarlo con el input lo guardamos en el state para luego subirlo a la db, hacer una doble validaicón con un schema de zod, mostrar toast success y redirigir a products, notar que la imagen sale broken pues apunta desde public, agregar un condicional para que use el secureUrl si no la encuentra en public, de paso colocarla en src/utils o lib/
