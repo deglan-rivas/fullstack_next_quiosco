@@ -81,3 +81,11 @@
 // data fetching revalidating existe por tiempo o eventos, next docs muestra solo por tags, pero también se puede por path ez solo hace un refetch desde el lado del cliente, no es que actualice las demás pantallas como websockets
 
 // type compuestos prisma 687 Q&A
+
+
+
+// 65
+// primero incluir la tabla y mostrar los rows con el button Editar
+// incluir la categoría e inferir tipos con awaited typeof o usar types derivados
+// recuperar el paginador a través de searchParams
+// crear el > de paginador, recuperar el total prodcuts y calcular total de páginas, condicional si llegamos a página límite, añadir el left arrow del paginador con su condicional y validaciones, 
