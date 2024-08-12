@@ -100,3 +100,11 @@
 // pnpm i next-cloudinary, seguir los docs de npm next-cloudinary para crear los 3 env vars, renderizar el componente para ver imágenes de type=file ez, notar que next-cloudinary solo funca con use client :o, 
 // un poco jodido la doc de next-cloudinary, seguir tutoriales nomás xd https://next.cloudinary.dev/clduploadwidget/basic-usage -> la cosa es tener un component con drag and drop para subir la imagen a cloudinary -> lo que sí es que es bastante configurable, hay que generar un preset y se puede limitar cantidad y tamaños máximos, 
 // la idea es usar un client component para subir la imagen a cloudinary, si todo va bien usamos el secureUrl para mostrarlo y al enviarlo con el input lo guardamos en el state para luego subirlo a la db, hacer una doble validaicón con un schema de zod, mostrar toast success y redirigir a products, notar que la imagen sale broken pues apunta desde public, agregar un condicional para que use el secureUrl si no la encuentra en public, de paso colocarla en src/utils o lib/
+
+
+
+// 67
+// recuperar el producto a través de los params, renderizarlo, si no se encuentra, entonces usar el file reservado notFound ez,
+// para el update se usará un action que debe ser use server, se validará con un use client, por eso hay que usar el composition pattern del children, se puede reciclar el ProductForm de pasadita, cambiar el texto a Guardar Cambios y otras cositas, incluso podemos hacer un props optional con product?: Product cosa que si es nuevo producto no espera nada, pero si es un edit todo se carga con un defaultValue
+// agregar un button de go bakc con el useRouter porque no funca con el Link xd, así como se conserva la data en los inputs, también hay que conservar el url de la imagen actual, siempre es bueno que si se sube una nueva imagen, se oculte la otra, porque los qa's son exigentes v': y siempre es bueno dar feedback al user xd
+// el action de update es sencillo, notar que es bueno utilizar un revalidate para evitar la data cacheada de next, eso siempre se debe hacer desde un server component, aprovechar y hacerlo en el update action
