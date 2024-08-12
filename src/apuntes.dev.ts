@@ -108,3 +108,11 @@
 // para el update se usará un action que debe ser use server, se validará con un use client, por eso hay que usar el composition pattern del children, se puede reciclar el ProductForm de pasadita, cambiar el texto a Guardar Cambios y otras cositas, incluso podemos hacer un props optional con product?: Product cosa que si es nuevo producto no espera nada, pero si es un edit todo se carga con un defaultValue
 // agregar un button de go bakc con el useRouter porque no funca con el Link xd, así como se conserva la data en los inputs, también hay que conservar el url de la imagen actual, siempre es bueno que si se sube una nueva imagen, se oculte la otra, porque los qa's son exigentes v': y siempre es bueno dar feedback al user xd
 // el action de update es sencillo, notar que es bueno utilizar un revalidate para evitar la data cacheada de next, eso siempre se debe hacer desde un server component, aprovechar y hacerlo en el update action
+
+
+
+// 68
+// se puede hacer una revalidación manual con el revalidatePath ez igual a ctrl F5 pero más use friendly xd
+// swr react hooks, pnpm i swr y crear la ruta /admin/orders/api/route.ts
+// mejor quitar el botón para revalidatePath manual y hacerlo automático con swr
+// bajo el uso de swr para revalidar fetching: es similar a react query, desactivar el onfocus para no saturar de querys al server, se hace con un timer, pero se va a comer toda la capa gratuita, lo mejor es usar webhooks con una arch orientada a eventos o websockets que es mucho más eficiente, en tiempo real y bidireccional 
