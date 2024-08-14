@@ -116,3 +116,10 @@
 // swr react hooks, pnpm i swr y crear la ruta /admin/orders/api/route.ts
 // mejor quitar el botón para revalidatePath manual y hacerlo automático con swr
 // bajo el uso de swr para revalidar fetching: es similar a react query, desactivar el onfocus para no saturar de querys al server, se hace con un timer, pero se va a comer toda la capa gratuita, lo mejor es usar webhooks con una arch orientada a eventos o websockets que es mucho más eficiente, en tiempo real y bidireccional 
+
+
+
+// 69
+// crear un api /orders con su page.tsx para mostrar las órdenes listas: las últimas 5, con doneAt not null, en orden desc, poblando los products
+// renderizar el get de prisma nomás ez segiur la misma lógica que para las órdenes nuevas
+// agregar un redirect en el page home y en cualquier otra ruta desconocida para mandarlo al products para crear un pedido u orden ez
