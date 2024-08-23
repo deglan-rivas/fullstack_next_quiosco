@@ -101,6 +101,11 @@
 // un poco jodido la doc de next-cloudinary, seguir tutoriales nomás xd https://next.cloudinary.dev/clduploadwidget/basic-usage -> la cosa es tener un component con drag and drop para subir la imagen a cloudinary -> lo que sí es que es bastante configurable, hay que generar un preset y se puede limitar cantidad y tamaños máximos, 
 // la idea es usar un client component para subir la imagen a cloudinary, si todo va bien usamos el secureUrl para mostrarlo y al enviarlo con el input lo guardamos en el state para luego subirlo a la db, hacer una doble validaicón con un schema de zod, mostrar toast success y redirigir a products, notar que la imagen sale broken pues apunta desde public, agregar un condicional para que use el secureUrl si no la encuentra en public, de paso colocarla en src/utils o lib/
 
+// al usar prisma en un "use client" da un error porque prisma no puede usarse en el ciente, tampoco deja usar el async await dle handleSubmit en el cliente, para eso usar composition pattern con children y evitar esos problemas
+// una única ruta /admin/products/new -> usar composición para coexistir el "use client" y "use server"
+// leer los next-cloudinary docs para configurar y habilitar el cors, también tiene configuración para nestjs usando multer por debajo :o
+// formatear el image path según sea local o usando cloudinary ez validar y desplegar
+
 
 
 // 67
