@@ -114,6 +114,9 @@
 // agregar un button de go bakc con el useRouter porque no funca con el Link xd, así como se conserva la data en los inputs, también hay que conservar el url de la imagen actual, siempre es bueno que si se sube una nueva imagen, se oculte la otra, porque los qa's son exigentes v': y siempre es bueno dar feedback al user xd
 // el action de update es sencillo, notar que es bueno utilizar un revalidate para evitar la data cacheada de next, eso siempre se debe hacer desde un server component, aprovechar y hacerlo en el update action
 
+// no olvidar los async await al llamar a prisma, con los console.log nos damos cuenta que si son promise pending o ya están resueltas con el await
+// por alguna razón el GoBackButton no acepta bien el css será quizás porque es un use client dentro de un use server por default o quizás porque el w-x es relativo y está dentro de un fragment que a su vez está concatenado por puro flex, pero no funca, lo que hice fue incluirlo dentro de un div junto al Heading y dentro darle un flex ez
+// defaultvalue para uncontrolled con actions de formData en nextjs y value para controlled con useState de react puro o mixto con nextjs
 
 
 // 68
