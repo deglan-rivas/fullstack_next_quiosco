@@ -133,3 +133,7 @@
 // crear un api /orders con su page.tsx para mostrar las órdenes listas: las últimas 5, con doneAt not null, en orden desc, poblando los products
 // renderizar el get de prisma nomás ez segiur la misma lógica que para las órdenes nuevas
 // agregar un redirect en el page home y en cualquier otra ruta desconocida para mandarlo al products para crear un pedido u orden ez
+
+// 70
+// no olvidar cambiar el build command de vercel o cualquier host a "npx prisma generate && npm run build"
+// agregar los dynamic = "force-dynamic" para evitar el cacheo de los route del backend -> los next docs no dice cuánto es su tiempo de cacheo, pero hay que forzarlo para que funque :'v https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config
