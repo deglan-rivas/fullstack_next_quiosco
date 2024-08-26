@@ -125,6 +125,8 @@
 // mejor quitar el botón para revalidatePath manual y hacerlo automático con swr
 // bajo el uso de swr para revalidar fetching: es similar a react query, desactivar el onfocus para no saturar de querys al server, se hace con un timer, pero se va a comer toda la capa gratuita, lo mejor es usar webhooks con una arch orientada a eventos o websockets que es mucho más eficiente, en tiempo real y bidireccional 
 
+// button con revalidatePath, swr, file route.ts en /admin/orders/api, refactorizar
+
 
 
 // 69
