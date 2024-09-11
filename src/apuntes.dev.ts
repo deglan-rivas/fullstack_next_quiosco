@@ -136,4 +136,5 @@
 
 // 70
 // no olvidar cambiar el build command de vercel o cualquier host a "npx prisma generate && npm run build"
-// agregar los dynamic = "force-dynamic" para evitar el cacheo de los route del backend -> los next docs no dice cuánto es su tiempo de cacheo, pero hay que forzarlo para que funque :'v https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config
+// agregar los dynamic = "force-dynamic" para evitar el cacheo de los route del backend -> los next docs no dice cuánto es su tiempo de cacheo, pero hay que forzarlo para que funque :'v https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config -> https://stackoverflow.com/questions/77190252/nexts-page-tsx-export-force-dynamic-does-not-render-dynamically
+// https://github.com/vercel/next.js/discussions/54075 -> 2.9k de issues xD 
