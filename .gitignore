@@ -38,3 +38,4 @@ next-env.d.ts
 # current project
 .env
 postgres
+.vscode
